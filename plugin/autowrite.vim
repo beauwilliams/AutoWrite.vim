@@ -1,28 +1,22 @@
 function! AutoWriteToggle()
-    let g:AutoWriteEnabled = !get(g:, 'AutoWriteEnabled', 0)
-    if g:AutoWriteEnabled
+    let g:IsAutoWriteEnabled = !get(g:, 'AutoWriteEnabled', 0)
+    if g:IsAutoWriteEnabled
         call AutoWriteEnable()
     else
         call AutoWriteDisable()
     endif
 endfunction
 
-
-function! AutoWriteReset()
+function! AutoWriteEnable()
     augroup AutoWrite
-        autocmd!
+        autocmd TextChanged,TextChangedI <buffer> silent write
     augroup END
 endfunction
 
-
-function! AutoWriteEnable()
-        augroup AutoWrite
-            autocmd TextChanged,TextChangedI <buffer> silent write
-        augroup END
-endfunction
-
 function! AutoWriteDisable()
-    call AutoWriteReset()
+    augroup AutoWrite
+        autocmd!
+    augroup END
 endfunction
 
 command! AutoWriteToggle call AutoWriteToggle()
