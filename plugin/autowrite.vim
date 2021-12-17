@@ -1,5 +1,5 @@
 function! AutoWriteToggle()
-    let g:IsAutoWriteEnabled = !get(g:, 'AutoWriteEnabled', 0)
+    let g:IsAutoWriteEnabled = !get(g:, 'IsAutoWriteEnabled', 0)
     if g:IsAutoWriteEnabled
         call AutoWriteEnable()
     else
