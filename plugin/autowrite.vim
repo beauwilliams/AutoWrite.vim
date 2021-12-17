@@ -1,3 +1,8 @@
+if !exists("g:AutoWriteOnInsert")
+    let g:AutoWriteOnInsert=1
+endif
+
+
 function! AutoWriteToggle()
     let g:IsAutoWriteEnabled = !get(g:, 'IsAutoWriteEnabled', 0)
     if g:IsAutoWriteEnabled
@@ -9,7 +14,11 @@ endfunction
 
 function! AutoWriteEnable()
     augroup AutoWrite
-        autocmd TextChanged,TextChangedI <buffer> silent write
+        if g:AutoWriteOnInsert
+            autocmd TextChanged,TextChangedI <buffer> silent write
+        else
+            autocmd TextChanged,InsertLeave <buffer> silent write
+        endif
     augroup END
 endfunction
 

@@ -26,13 +26,20 @@ use 'beauwilliams/autowrite.nvim'
 Plug 'beauwilliams/autowrite.nvim'
 ```
 
-## Vim Commands
+## Commands
 
 | _Command_      | _Description_ |
 | -------------- | ------------- |
 | `:AutoWriteEnable` |  Enable auto writing the file while inserting text into the current buffer. |
 | `:AutoWriteDisable` |  Disable auto writing the file while inserting text into the current buffer. |
 | `:AutoWriteToggle` |  Toggle AutoWrite on and off again. |
+
+## Configurables
+
+| _Option_      | _Description_ |
+| -------------- | ------------- |
+| `let AutoWriteOnInsert = 0` |  Disables auto writing of buffer while typing in insert mode. |
+
 
 ## Help
 
@@ -42,7 +49,3 @@ See `:h autowrite`
 ## Enhancements
 
 Submit a PR! 😃
-
-
-
-

@@ -5,6 +5,7 @@ CONTENTS                                           *autowrite-contents*
 Introduction                  |autowrite-introduction|
 Usage                         |autowrite-usage|
 Commands                      |autowrite-commands|
+Configuration                 |autowrite-configuration|
 
 
 ===========================================================================
@@ -21,20 +22,36 @@ USAGE                                                    *autowrite-usage*
 Enable auto writing of the buffer, or disable it. By default it is disabled.
 
 ===========================================================================
-COMMANDS                                  *:autowrite* *template-commands*
+COMMANDS                                                *autowrite-commands*
 
 The plug-in defines three commands
 
 
-:AutowriteToggle
+*:AutowriteToggle*
 
 Toggles auto writing on and off.
 
-:AutowriteEnable
+*:AutowriteEnable*
 
 Enables auto writing
 
-:AutowriteDisable
+*:AutowriteDisable*
 
 Disables auto writing
+
+
+===========================================================================
+CONFIGURATION                                    *:autowrite-configuration*
+
+Specify whether buffer contents will be written during insert mode as text is typed or
+if the file will only be automatically written in normal mode when exiting insert mode.
+
+`The file will be always automatically written in normal mode when text is deleted or pasted etc.`
+
+Default = 1
+
+`Disables auto writing file during insert mode as text is typed`
+
+let g:AutoWriteOnInsert = 0
+
 
