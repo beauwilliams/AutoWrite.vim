@@ -1,0 +1,1 @@
+#  AutoWrite.vim
