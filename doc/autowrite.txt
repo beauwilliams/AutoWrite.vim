@@ -1,0 +1,40 @@
+*autowrite.txt*  Simple AutoWrite Plugin compatible with most if not all vim distributions (Vim/Neovim)
+
+CONTENTS                                           *autowrite-contents*
+
+Introduction                  |autowrite-introduction|
+Usage                         |autowrite-usage|
+Commands                      |autowrite-commands|
+
+
+===========================================================================
+INTRODUCTION                                       *autowrite-introduction*
+
+This is a simple plug-in for Vim (and NeoVim) that enables autowriting of the buffer.
+It is useful for applications such as Markdown Previewers (e.g https://github.com/ms-jpq/markdown-live-preview)
+to automatically render the text in the preview window as you type.
+
+
+===========================================================================
+USAGE                                                    *autowrite-usage*
+
+Enable auto writing of the buffer, or disable it. By default it is disabled.
+
+===========================================================================
+COMMANDS                                  *:autowrite* *template-commands*
+
+The plug-in defines three commands
+
+
+:AutowriteToggle
+
+Toggles auto writing on and off.
+
+:AutowriteEnable
+
+Enables auto writing
+
+:AutowriteDisable
+
+Disables auto writing
+
