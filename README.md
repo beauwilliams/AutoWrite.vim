@@ -26,6 +26,11 @@ use 'beauwilliams/autowrite.nvim'
 Plug 'beauwilliams/autowrite.nvim'
 ```
 
+### [lazy.nvim](https://github.com/folke/lazy.nvim)
+```lua
+"beauwilliams/AutoWrite.vim",
+```
+
 ## Commands
 
 | _Command_      | _Description_ |
